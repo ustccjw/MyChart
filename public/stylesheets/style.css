@@ -1,17 +1,27 @@
 html {font-size:62.5%;}
-body {font: 1.2rem/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif; 
+body {font:1.2rem/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif; 
       background:hsl(60, 100%, 99%);}
 
 header {height:8rem; background:hsl(60, 22%, 95%);}
 footer {height:5rem;}
-#wrap {width:50%; margin:0 auto; padding:4rem 4rem;
-       border-bottom:1px solid gray;}
+#wrap {width: 100%;}
+#chat-body {float:left; width:100%;}
+#chat-body-wrap {margin:0 25%; padding-bottom:3rem; 
+                 border-bottom:1px solid gray;}
+#chat-info {float:left; width:25%; margin-left:-100%;}
+#chat-info-wrap {height:38rem; margin:3rem;}
+#sys-message {float:left; width:25%; margin-left:-25%;}
+#sys-message-wrap {height:38rem; margin:3rem; overflow:auto;}
 
 header h1 {font-size:4rem; line-height:8rem; text-align:center;}
 footer small {display:block; line-height:5rem; text-align:center;}
-#chat-list {height:40rem; color:#825D5B;}
+#chat-list {height:38rem; margin:2rem 0; color:#825D5B; overflow:auto;}
 #chat-list ul li {margin-top:1rem;}
 #chat-list ul li:first-child {margin-top:0;}
-#chat-list ul li .user-name {width:10rem; height:2.5rem; line-height:2.5rem;}
-#chat-list ul li .message {max-height:4rem; overflow:auto; padding:1rem 1rem;
-                           background:hsl(60, 9%, 85%); word-wrap:break-word;}
+#chat-list ul li .nick-name {height:2.5rem; line-height:2.5rem;}
+#chat-list ul li .message {padding:1rem 1rem; background:hsl(60, 9%, 85%); 
+                           word-wrap:break-word;}
+#send-message {text-align:center;}
+#send-message input {height:2rem; border-radius:1rem; outline:none;}
+#send-message button {width:7rem; height:2.5rem;}
+
