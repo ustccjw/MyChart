@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "ustccjw's chartrooms",
     "dependencies": {
-        "socket.io": "~0.9.6",
+        "socket.io": "~0.9.16",
         "mime": "~1.2.7"
     } 
 }
