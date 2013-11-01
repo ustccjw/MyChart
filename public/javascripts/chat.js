@@ -11,20 +11,24 @@ Chat.prototype.changeRoom = function(room){
     this.socket.emit('join', {newRoom: room}) ;
 } ;
 
-Chat.prototype.processCommand = function(words){
-    var index = words.indexOf(' ') ;
-    var command = words.slice(1, index) ;
+Chat.prototype.changeName = function(name){
+    this.socket.emit('nameAttempt', {newName: name}) ;
+}
+
+Chat.prototype.processCommand = function(text){
+    var index = text.indexOf(' ') ;
+    var command = text.slice(1, index) ;
     var message = '' ;
 
     switch(command){
         case 'join':
-            var room = words.slice(index + 1) ;
+            var room = text.slice(index + 1) ;
             this.changeRoom(room) ;
             break ;
 
         case 'nick':
-            var name = words.slice(index + 1) ;
-            this.socket.emit('nameAttempt', name) ;
+            var name = text.slice(index + 1) ;
+            this.changeName(name) ;
             break;
 
         default:
