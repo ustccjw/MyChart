@@ -1,5 +1,5 @@
 var socket = io.connect(location.host, 
-             {'connect_timeout': 30000}) ;
+             {'reconnect': false, 'connect timeout': 120000}) ;
 
 $(function(){
     var chatApp = new Chat(socket) ;
